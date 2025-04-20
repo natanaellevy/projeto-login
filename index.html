@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <main>
@@ -15,10 +16,20 @@
             </div>
             <div id="formulario">
                 <h1>Login</h1>
-                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
-                    
-
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu <br> ambiente.</p>
+                <form action="login.php" method="post" autocomplete="on">
+                    <p>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="nome@gmail.com">
+                    </p>
+                    <p>
+                        <label for="isen">Senha: </label>
+                        <input type="password" name="senha" id="isen" required minlength="8" maxlength="20" size="10" placeholder="Sua Senha" autocomplete="current-password">
+                    </p>
+                    <p>
+                        <input type="submit" value="Entrar">
+                        <input type="reset" value="Limpar">
+                    </p>
                 </form>
             </div>
         </section>
